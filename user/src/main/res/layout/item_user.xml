@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.gui.antonio.retrofitcoroutineexample.database.entity.UserEntity" />
+
+        <variable
+            name="handlerClick"
+            type="com.gui.antonio.user.view.UserAdapter.HandlerClick" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:onClick="@{handlerClick::onClickItem}"
+            android:id="@+id/userTv"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}" />
+
+    </RelativeLayout>
+
+</layout>
